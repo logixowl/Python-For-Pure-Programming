@@ -235,4 +235,4 @@ print(type(x))
 <hr>
 <br>
 
-[Next (0x04 Strings)](./strings.md)
+[Next (Strings)](./strings.md)

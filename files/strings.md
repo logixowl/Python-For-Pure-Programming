@@ -40,7 +40,7 @@ B for Beer""")
 ```
 ###### Output :
 ```
-A  for Apple
+A for Apple
 B for Beer
 ```
 
@@ -141,7 +141,7 @@ Format : ``` string.split("separator", maxsplit) ```
 
 *maxsplit တွင် ကိုယ်ထုတ်ချင်တဲ့ split အရေအတွက်ထက် တစ်ခုလျော့ပြီး သတ်မှတ်ပေးရပါမယ်*
 
-*maxsplitနေရာမှာ ဘာမှမထည့်ရင် default အဖြစ် -1 လို့သတ်မှတ်ပြီး အကုန်လုံးကို ထုတ်ပေးပါတယ်*
+*maxsplit နေရာမှာ ဘာမှမထည့်ရင် default အဖြစ် -1 လို့သတ်မှတ်ပြီး အကုန်လုံးကို ထုတ်ပေးပါတယ်*
 ```python
 mystr = "Logix Owls,owls"
 print(mystr.split())
@@ -157,3 +157,5 @@ print(mystr.split("o",1))
 ['L', 'gix Owls,owls']
 
 ```
+
+[Next (Operators)](./operators.md)

@@ -327,3 +327,4 @@ print(m)
 
 > For more numeric function > [TutorialsPoint](https://www.tutorialspoint.com/python/python_numbers.htm)
 
+[Next (Conditions)](./conditions.md)

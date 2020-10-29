@@ -81,4 +81,4 @@ Hello Nay Kg Lr?
 
 <br>
 
-[Next (0x03 Data Type)](./data_types.md)
+[Next (Data Type)](./data_types.md)

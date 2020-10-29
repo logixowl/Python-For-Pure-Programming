@@ -588,4 +588,4 @@ Left Shift ကို ၂ ခါ လုပ်တဲ့အခါ 1 1 သည် ဘ
 1100 က 12
 ```
 
-[Next (0x06 Numeric Functions)](./0x06.md)
+[Next (Numeric Functions)](./numeric.md)

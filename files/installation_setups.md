@@ -89,7 +89,7 @@ python3 hello.py
 
 <br>
 
-[Next (0x02 Hello World)](./helloworld_program.md)
+[Next (Hello World)](./helloworld_program.md)
 
 ### Reference Links
 https://www.w3schools.com/python/

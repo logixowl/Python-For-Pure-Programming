@@ -34,4 +34,4 @@ Programming စိတ်ဝင်စားတဲ့သူတွေအနေန�
 
 [Contents](../README.md)
 
-[Next (0x01 Installation & Setups)](./installation_setups.md)
+[Next (Installation & Setups)](./installation_setups.md)
