@@ -2,7 +2,7 @@
 
 #### IF Statement
 
-![IF statement](../img/condition_diagram.jpg)
+![IF statement](../img/condition_diagram1.jpg)
 
 > Condition Statements တွေကို [Comparison operators](./operators.md#comparison-operators) တွေနဲ့ တွဲသုံးလေ့ရှိတယ်
 
