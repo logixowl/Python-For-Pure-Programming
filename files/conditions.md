@@ -114,4 +114,56 @@ Enter a number: 4
 Even
 ```
 
+<br>
+
+##### Example 6 (Calculator program)
+```python
+a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+operator = input('Enter a operator (+,-,*,/): ')
+
+ans = 0
+
+if operator == '+':
+	ans = a + b
+elif operator == '-':
+	ans = a - b
+elif operator == '*':
+	ans = a * b
+elif operator == '/':
+	ans = a / b
+else:
+	ans = "Invalid operator"
+
+print(str(a) + operator + str(b) + '=' + str(ans))
+```
+###### Output 1:
+```
+Enter first number: 3
+Enter second number: 5
+Enter a operator (+,-,*,/): +
+3+5=8
+```
+###### Output 2:
+```
+Enter first number: 10
+Enter second number: 3
+Enter a operator (+,-,*,/): -
+10-3=7
+```
+###### Output 3:
+```
+Enter first number: 10
+Enter second number: 5
+Enter a operator (+,-,*,/): /
+10/5=2.0
+```
+###### Output 4:
+```
+Enter first number: 4
+Enter second number: 9
+Enter a operator (+,-,*,/): #
+4#9=Invalid operator
+```
+
 [Next (Loops)](./loops.md)
