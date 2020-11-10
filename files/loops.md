@@ -246,11 +246,139 @@ Enter a number or stop to output: stop
 Total sum = 10
 ```
 
-##### Example 1 (number output)
-```python
+<br>
+<hr>
 
+#### For Loops
+
+> ```for``` loop ကို sequence တွေထဲက item တွေကို တစ်ခုချင်းဆွဲထုတ်တဲ့ နေရာမှာသုံးတယ်
+
+> တခြား language တွေနဲ့ယှဥ်မယ်ဆိုရင် ```foreach``` လို အလုပ်လုပ်ပါတယ်။
+
+> ```range```, ```list```, ```tuple```, ```dictionary```, ```set```, ```string``` စတာတဲ့ sequence တွေနဲ့ သုံးကြတယ်။
+
+##### Example 10 (using range)
+```python
+for i in range(5):
+	print(i)
 ```
 ###### Output:
 ```
+0
+1
+2
+3
+4
+```
 
+##### Example 11 (using list)
+```python
+colors = ['red','green','blue']
+for c in colors:
+	print("It is",c)
+```
+###### Output:
+```
+It is red
+It is green
+It is blue
+```
+
+##### Example 12 (using string)
+```python
+mystring = "Hello logixowl"
+
+for s in mystring:
+	print(s)
+```
+###### Output:
+```
+H
+e
+l
+l
+o
+ 
+l
+o
+g
+i
+x
+o
+w
+l
+```
+
+##### Example 13 (2 para range)
+
+> ```range(x,y)```
+
+> x = စမယ့် value
+
+> y = ဆုံးမယ့် value ကို ၁ လျှော့ (Eg. 10 ထိထုတ်ချင်ရင် 11 ဆိုပြီး ၁ ခုပိုယူ)
+
+```python
+for n in range(2,6):
+	print(n)
+```
+###### Output:
+```
+2
+3
+4
+5
+```
+
+##### Example 14 (3 para range)
+
+> ```range(x,y,z)```
+
+> z = step (Default 1)
+
+```python
+for n in range(2,10,2):
+	print(n)
+```
+###### Output:
+```
+2
+4
+6
+8
+```
+
+##### Example 15 (break in for)
+```python
+for n in range(10):
+	if n == 5:
+		break
+	print(n)
+```
+###### Output:
+```
+0
+1
+2
+3
+4
+```
+
+##### Example 16 (continue in for)
+```python
+for n in range(10):
+	if n == 5:
+		continue
+	print(n)
+```
+###### Output:
+```
+0
+1
+2
+3
+4
+6
+7
+8
+9
 ```
