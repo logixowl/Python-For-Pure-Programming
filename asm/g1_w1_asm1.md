@@ -1,4 +1,6 @@
-## Assignment 1
+## Assignment 1 (Group-1)(Week-1)
+
+> Screenshot Assignment
 
 #### Step-1
 ```email``` ဆိုတဲ့ string variable တစ်ခုမှာ
