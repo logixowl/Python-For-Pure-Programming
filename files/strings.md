@@ -29,15 +29,15 @@ print(type(hello))
 
 ```python
 print('mg mg\'s book')
-print("she said that \"i love you\"")
+print("she says \"i love you\"")
 ```
 ###### Output:
 ```
 mg mg's book
-she said that "i love you"
+she says "i love you"
 ```
 
-**Some usefull special characters**
+**Some useful special characters**
 
 > ```\t``` = tab
 
