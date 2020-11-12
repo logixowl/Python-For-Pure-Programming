@@ -10,7 +10,7 @@
 * Boolean Type
 * Binary Types
 
-၇ မျိုးကို နှစ်သက်ရာ types တစ်ခုစီဖြင့် variable ကြေညာပြီး variable ရယ်၊ သူ့ရဲ့ type ရယ်ကို ```print()``` function တစ်ခါပဲသုံးပြီး output ထုတ်ပေးရမည်။
+၇ မျိုးစလုံးကို နှစ်သက်ရာ types တစ်ခုစီဖြင့် variable ကြေညာပြီး variable ရယ်၊ သူ့ရဲ့ type ရယ်ကို ```print()``` function တစ်ခါပဲသုံးပြီး output ထုတ်ပေးရမည်။
 
 (ကြားမှာတော့ tab ခြားပေးရမည်။)(Example Program ကို ကြည့်ပါ)
 
@@ -49,15 +49,13 @@ hello 	 <class 'str'>
 
 > *သင့်ရဲ့ email သည် ```mgmg123@gmail.com``` ဆိုပါစို့*
 
-#### Example File Name
-```
-asm_mgmg123.py
-```
+> ```asm_mgmg123.py``` ဟု ပေးရမည်
+
 
 * ***အထက်ပါအတိုင်း မှန်ကန်အောင်ပေးရမည်***
 * **မသေချာလျှင် Page မှာလာပြီး မေးမြန်းပေးပါ**
-* **email name မှားသူများသည် အမှတ် ရမည်မဟုတ်ပါ**
+* **email name/ file name မှားသူများသည် အမှတ် ရမည်မဟုတ်ပါ**
 
 သေချာပြီဆိုလျှင် ဒီ link မှာ Assignment ထပ်ရပါမည်
 
-[https://forms.gle/rwfDc5NqBRE6sYiU9](./https://forms.gle/rwfDc5NqBRE6sYiU9)
+[https://forms.gle/rwfDc5NqBRE6sYiU9](https://forms.gle/rwfDc5NqBRE6sYiU9)

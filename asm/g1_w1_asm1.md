@@ -41,6 +41,6 @@ Source Code ကို Screenshot ရိုက်ထားပါ
 
 ပြီးရင် 
 
-[https://forms.gle/agjJ7SA7WXbHk59h6](./https://forms.gle/agjJ7SA7WXbHk59h6)
+[https://forms.gle/agjJ7SA7WXbHk59h6](https://forms.gle/agjJ7SA7WXbHk59h6)
 
 အဲ့ဒီ link မှာ Assignment 1 ခေါင်းစဥ်အလိုက် မှန်ကန်စွာ တင်ပေးပါ
