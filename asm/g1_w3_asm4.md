@@ -25,11 +25,11 @@ number ကို အမှတ်လို့ ယူဆပြီး Grade A, B, C
 
 | Number or Mark | Grade |
 | --- | --- |
-| 0 to 19 | A |
-| 20 to 39 | B |
+| 0 to 19 | E |
+| 20 to 39 | D |
 | 40 to 59 | C |
-| 60 to 79 | D |
-| 80 to 100 | E |
+| 60 to 79 | B |
+| 80 to 100 | A |
 | others | invalid |
 
 ##### Sample Output 1

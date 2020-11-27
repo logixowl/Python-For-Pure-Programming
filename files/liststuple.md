@@ -244,13 +244,20 @@ ValueError: list.remove(x): x not in list
 
 > parameter မထည့်ရင် Default အနေနဲ့ နောက်ဆုံးအခန်းကို remove လုပ်တယ်
 
-##### Example  ()
+##### Example 8 (remove using pop())
 ```python
+years = [2017,2018,2019,2020]
 
+years.pop(1)
+print(years)
+
+years.pop()
+print(years)
 ```
 ###### Output:
 ```
-
+[2017, 2019, 2020]
+[2017, 2019]
 ```
 
 ##### Example  ()
