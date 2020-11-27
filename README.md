@@ -23,3 +23,11 @@
 | 0x0a | [Set & Dictionary](./files/setdict.md) |
 | 0x0b | [Functions](./files/functions.md) |
 | 0x0c | [String Formatting](./files/stringformat.md) |
+
+#### Assignments & Quiz
+
+| No. | Title |
+| --- | --- |
+| 0x00 | [Group-1 Week-1](./asm/g1_w1.md) |
+| 0x00 | [Group-1 Week-2](./asm/g1_w2.md) |
+| 0x00 | [Group-1 Week-3](./asm/g1_w3.md) |

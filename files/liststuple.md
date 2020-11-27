@@ -196,7 +196,7 @@ print(men)
 men.insert(3,'ba')
 print(men)
 
-boys = ('ko','nyi')
+boys = ['ko','nyi']
 
 men.extend(boys)
 print(men)
@@ -208,23 +208,41 @@ print(men)
 ['hla', 'tun', 'mya', 'ba', 'ko', 'nyi']
 ```
 
-##### Example  ()
-```python
+##### Example 7 (Remove Items)
 
+> ```list.remove(item)``` အသုံးပြုခြင်း
+
+```python
+colors = ['red', 'orange', 'blue']
+colors.remove('orange')
+
+print(colors)
 ```
 ###### Output:
 ```
-
+['red', 'blue']
 ```
 
-##### Example  ()
-```python
+> ```list.remove(item)``` မှာ remove လုပ်ချင်တဲ့ item က list ထဲ မရှိရင် error တက်ပါတယ်
 
+##### Error Example (don't do it)
+```python
+colors = ['red', 'orange', 'blue']
+colors.remove('black')
+
+print(colors)
 ```
 ###### Output:
 ```
-
+Traceback (most recent call last):
+  File "test.py", line 2, in <module>
+    colors.remove('black')
+ValueError: list.remove(x): x not in list
 ```
+
+> ```list.pop(index)``` ကို အသုံးပြုခြင်း
+
+> parameter မထည့်ရင် Default အနေနဲ့ နောက်ဆုံးအခန်းကို remove လုပ်တယ်
 
 ##### Example  ()
 ```python
