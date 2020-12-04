@@ -1,7 +1,5 @@
 ### Lists & Tuple
 
-#### List
-
 ##### Example 1 (declare)
 List
 ```python
@@ -260,56 +258,126 @@ print(years)
 [2017, 2019]
 ```
 
-##### Example  ()
-```python
+> ```del``` ဆိုတဲ့ keyword နဲ့လဲ Remove လုပ်လို့ရပါတယ်
 
+##### Example 9 (del)
+```python
+years = [2017,2018,2019,2020]
+
+del years[1]
+print(years)
 ```
 ###### Output:
 ```
-
+[2017, 2019, 2020]
 ```
 
-##### Example  ()
-```python
+##### Example 10 (clear)
 
+> Removing all items
+
+```python
+years = [2017,2018,2019,2020]
+
+years.clear()
+print(years)
 ```
 ###### Output:
 ```
-
+[]
 ```
 
-##### Example  ()
-```python
+<br>
+<hr>
 
+#### List Methods
+
+##### Example 11 (reverse)
+
+```python
+numbers = [4,7,1,2,3]
+numbers.reverse()
+print(numbers)
 ```
 ###### Output:
 ```
-
+[3, 2, 1, 7, 4]
 ```
 
-##### Example  ()
-```python
+##### Example 12 (sort)
 
+> Sorting Alphabetically & Numerically
+
+```python
+colors = ['red','green','blue']
+colors.sort()
+print(colors)
 ```
 ###### Output:
 ```
-
+['blue', 'green', 'red']
 ```
 
-##### Example  ()
-```python
+##### Example 13 (sort descending)
 
+```python
+numbers = [4,7,1,2,3]
+numbers.sort(reverse=True)
+print(numbers)
 ```
 ###### Output:
 ```
-
+[7, 4, 3, 2, 1]
 ```
 
-##### Example  ()
-```python
+#### List Copy
 
+> list တွေကို copy လုပ်တဲ့အခါမှာ ၂ နည်းလုပ်လို့ရပါတယ်
+
+> ဒါပေမယ့် ```list2 = list1``` ဆိုပြီး string တွေ integer တွေလို copy လို့ မရပါဘူး။
+> အဲ့လို လုပ်ခြင်းက value တွေ သာ copy ရုံမကပဲ ```list2``` သည် ```list1``` ကို ကိုယ်စားပြုသလိုဖြစ်သွားပါတယ်။
+
+> အဲ့တော့ ဘာပြဿနာတက်လဲဆိုရင် list2 ကို ပြင်လိုက်ရင် ```list1``` ပါ လိုက်ပြီး ပြောင်းလဲသွားသလို ```list1``` ကိုပြုပြင်လိုက်ရင် ```list2``` ပါ လိုက်ပြီး ပြောင်းလဲသွားပါတယ်။
+
+> အဲ့ဒါကြောင့် list တွေကို copy ကူးလိုတဲ့အခါ အောက်ဖော်ပြပါ ၂ နည်းထဲက တစ်နည်းကိုသာ သုံးဖို့ အကြံပေးပါတယ်။
+
+1. List Method (copy)
+2. Build-in Method (list)
+
+##### Example 14 (using list.copy())
+```python
+colors = ['red','green','blue']
+colors_copy = colors.copy()
+print(colors_copy)
 ```
 ###### Output:
 ```
-
+['red', 'green', 'blue']
 ```
+
+##### Example 15 (using list(iterable))
+```python
+numbers = [4,7,1,2,3]
+num_copy = list(numbers)
+print(numbers)
+```
+###### Output:
+```
+[4, 7, 1, 2, 3]
+```
+
+**Other List Methods**
+
+| Methods | Description |
+| --- | --- |
+| append() | Adds an element at the end of the list |
+| clear() | Removes all the elements from the list |
+| copy() | Returns a copy of the list |
+| count() | Returns the number of elements with the specified value |
+| extend() | Add the elements of a list (or any iterable), to the end of the current list |
+| index() | Returns the index of the first element with the specified value |
+| insert() | Adds an element at the specified position |
+| pop() | Removes the element at the specified position |
+| remove() | Removes the first item with the specified value |
+| reverse() | Reverses the order of the list |
+| sort() | Sorts the list |
