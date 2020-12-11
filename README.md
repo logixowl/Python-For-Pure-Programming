@@ -31,3 +31,5 @@
 | 0x00 | [Group-1 Week-1](./asm/g1_w1.md) |
 | 0x01 | [Group-1 Week-2](./asm/g1_w2.md) |
 | 0x02 | [Group-1 Week-3](./asm/g1_w3.md) |
+| 0x03 | [Group-1 Week-4](./asm/g1_w4.md) |
+| 0x04 | [Group-1 Week-5](./asm/g1_w5.md) |
