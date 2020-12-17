@@ -23,7 +23,28 @@ apple
 logixowl
 ```
 
+> ဒီလိုလေးလဲ ရေးလို့ရပါတယ်
+
 ##### Example 2
+```python
+days = {
+	'mon':'Monday',
+	'tue':'Tuesday',
+	'web':'Webnesday',
+	'thu':'Thursday',
+	'fri':'Friday',
+	'sat':'Saturday',
+	'sun':'Sunday'
+}
+
+print(days)
+```
+###### Output:
+```
+{'mon': 'Monday', 'tue': 'Tuesday', 'web': 'Webnesday', 'thu': 'Thursday', 'fri': 'Friday', 'sat': 'Saturday', 'sun': 'Sunday'}
+```
+
+##### Example 3
 ```python
 person = {}
 person['name'] = "Ba Kyaw"
@@ -37,235 +58,257 @@ print(person)
 {'name': 'Ba Kyaw', 'age': 34, 'gender': 'male'}
 ```
 
-> List, Tuple နဲ့ မတူတဲ့ နောက်တစ်ချက်က Set ကို empty set ဆောက်တဲ့အခါမှာ ```myset = {}``` ဆိုရင် ```error``` တက်ပါတယ်
-
-> ```myset = set()``` လို့ဆောက်ရပါတယ်
-
-##### Example 3
-```python
-myset = set()
-myset.add(40)
-myset.add(99)
-print(myset)
-```
-###### Output:
-```
-{40, 99}
-```
-
-> Set မှာ item တွေထည့်ပြီးရင် change လို့ မရတော့ပါဘူး
-
 ##### Example 4 (access items)
 ```python
-colorSet = {'red','green','blue','black','white'}
+days = {
+	'mon':'Monday',
+	'tue':'Tuesday',
+	'web':'Webnesday',
+	'thu':'Thursday',
+	'fri':'Friday',
+	'sat':'Saturday',
+	'sun':'Sunday'
+}
 
-for color in colorSet:
-	print('This is',color)
+print(days['sun'])
+print(days.get('sat'))
+
+# this will return None
+print(days.get('other'))
+
+# Don't do it (Error)
+print(days['other'])
 ```
 ###### Output:
 ```
-This is white
-This is green
-This is red
-This is black
-This is blue
-```
-
-> တခြားသော Iterable items တွေကို အကုန်ထည့်ချင်တဲ့ အခါမှာ ```set.update(iterable)``` ကိုသုံးပါတယ်။
-
-##### Example 5 (update)
-```python
-abc = {'a','b','c'}
-xyz = ['x','y','z']
-abc.update(xyz)
-
-print(abc)
-```
-###### Output:
-```
-{'c', 'a', 'y', 'b', 'x', 'z'}
-```
-
-##### Example 6 (removing)
-```python
-alphabet = set("abcdefg")
-print("Original set:")
-print(alphabet)
-print()
-
-alphabet.remove('e')
-print("Removed 'e':")
-print(alphabet)
-print()
-
-alphabet.discard('a')
-print("Discarded 'a':")
-print(alphabet)
-print()
-
-print("Popped unknown item '",alphabet.pop(),"':")
-print(alphabet)
-print()
-
-alphabet.clear()
-print("Cleared:")
-print(alphabet)
-print()
-
-del alphabet
-print("Deleted variable alphabet:")
-print(alphabet)
-#error will occur
-print()
-```
-###### Output:
-```
-Original set:
-{'g', 'c', 'a', 'f', 'd', 'b', 'e'}
-
-Removed 'e':
-{'g', 'c', 'a', 'f', 'd', 'b'}
-
-Discarded 'a':
-{'g', 'c', 'f', 'd', 'b'}
-
-Popped unknown item ' g ':
-{'c', 'f', 'd', 'b'}
-
-Cleared:
-set()
-
-Deleted variable alphabet:
+Sunday
+Saturday
+None
 Traceback (most recent call last):
-  File "test.py", line 27, in <module>
-    print(alphabet)
-NameError: name 'alphabet' is not defined
+  File "test.py", line 19, in <module>
+    print(days['other'])
+KeyError: 'other'
 ```
 
-> ```set.remove()``` နဲ့ ```set.discard()``` အဓိက ကွာခြားတာကတော့ remove က ဖျက်လိုတဲ့ item က set ထဲမှာမရှိရင် error တက်ပြီး discard ကတော့ မတက်ပါဘူး
+##### Example 5 (dict_keys)
+```python
+days = {
+	'mon':'Monday',
+	'tue':'Tuesday',
+	'web':'Webnesday'
+}
 
-> ```set.pop()``` က list, tuple တို့နဲ့ မတူတာက set သည် unindex ဖြစ်တဲ့ အတွက် ဖျက်လိုတဲ့ index ကို ရွေးပြီး ဖျက်လို့ မရဘူး။ set ထဲမှာ ရှိနေတဲ့ ထိပ်ဆုံးအခန်းကို ဖျက်လိုက်တာဖြစ်တယ် (ဒါကြောင့် သူ ဘယ်နားကို ဖျက်လိုက်တယ်ဆိုတာ မသိရဘူး)
+dicKeys = days.keys()
 
-> ```set.clear()``` နဲ့ ```del set``` ကွာခြားတာကတော့ clear က set ထဲမှာရှိတဲ့ items တွေအားလုံးကိုပဲ ဖျက်တာ၊ del ကတော့ အဲဒီ variable တစ်ခုလုံးကို ဖျက်လိုက်တာ
+print(dicKeys)
+print(type(dicKeys))
+
+days['sun']='Sunday'
+print(dicKeys)
+```
+###### Output:
+```
+dict_keys(['mon', 'tue', 'web'])
+<class 'dict_keys'>
+dict_keys(['mon', 'tue', 'web', 'sun'])
+```
+
+##### Example 6 (dict_values)
+```python
+days = {
+	'mon':'Monday',
+	'tue':'Tuesday',
+	'web':'Webnesday'
+}
+
+dicValues = days.values()
+
+print(dicValues)
+print(type(dicValues))
+
+days['sun']='Sunday'
+
+print(dicValues)
+```
+###### Output:
+```
+dict_values(['Monday', 'Tuesday', 'Webnesday'])
+<class 'dict_values'>
+dict_values(['Monday', 'Tuesday', 'Webnesday', 'Sunday'])
+```
+
+##### Example 7 (dict_items)
+```python
+days = {
+	'mon':'Monday',
+	'tue':'Tuesday'
+}
+
+dicItems = days.items()
+
+print(dicItems)
+print(type(dicItems))
+
+days['sun']='Sunday'
+
+print(dicItems)
+```
+###### Output:
+```
+dict_items([('mon', 'Monday'), ('tue', 'Tuesday')])
+<class 'dict_items'>
+dict_items([('mon', 'Monday'), ('tue', 'Tuesday'), ('sun', 'Sunday')])
+```
+
+##### Example 8 (removing)
+```python
+months = {
+	'JAN':'January',
+	'FEB':'February',
+	'MAR':'March',
+	'APR':'April',
+	'MAY':'May'
+}
+
+print("> Using dict.pop(key)")
+print(months.pop('JAN'))
+print(months)
+print()
+
+print("> Using dict.popitem()")
+print(months.popitem())
+print(months)
+print()
+
+print("> Using del")
+del months['FEB']
+print(months)
+print()
+
+print("> Using dict.clear()")
+months.clear()
+print(months)
+print()
+
+# Don't do it (error)
+print("> Using del")
+del months
+print(months)
+print()
+```
+###### Output:
+```
+> Using dict.pop(key)
+January
+{'FEB': 'February', 'MAR': 'March', 'APR': 'April', 'MAY': 'May'}
+
+> Using dict.popitem()
+('MAY', 'May')
+{'FEB': 'February', 'MAR': 'March', 'APR': 'April'}
+
+> Using del
+{'MAR': 'March', 'APR': 'April'}
+
+> Using dict.clear()
+{}
+
+> Using del
+Traceback (most recent call last):
+  File "test.py", line 33, in <module>
+    print(months)
+NameError: name 'months' is not defined
+```
+
+##### Example 9 (looping)
+```python
+person = {
+	"name": "Bo Kyaw",
+	"age" : 39,
+	"gender": "male",
+	"skills": ['programming','developing']
+}
+
+# method 1
+for p in person:
+	print(p, "\t>", person[p])
+
+print('________________')
+# method 2
+for key,value in person.items():
+	print(key, "\t:", value)
+```
+###### Output:
+```
+name    > Bo Kyaw
+age     > 39
+gender  > male
+skills  > ['programming', 'developing']
+________________
+name    : Bo Kyaw
+age     : 39
+gender  : male
+skills  : ['programming', 'developing']
+```
 
 <hr>
 <br>
 
-**Set ကို အဓိကသုံးလို့ကောင်းတဲ့အပိုင်းလာပါပြီ**
-
-#### Set Union
-
-> Union ဆိုတာ set နှစ်ခုကို ရောလိုက်တာပါ
-
-![Set Union Example](../img/sets_union.png)
-
-##### Example 7 (union)
-
+##### Program 1 (using dict and list)
 ```python
-setA = {1,2,3,4,5}
-setB = {1,3,5,7,9}
+students = [
+	{
+		"id": 1,
+		"name": "Mg Mg",
+		"email": "mgmg@gmail.com"
+	},
+	{
+		"id": 2,
+		"name": "Myo Myo",
+		"email": "myo@gmail.com"
+	},
+	{
+		"id": 3,
+		"name": "Thu Thu",
+		"email": "thu@gmail.com"
+	}
+]
 
-#Union using set.union()
-print(setA.union(setB))
-
-#Union using '|' operator
-print(setA | setB)
-```
-###### Output:
-```
-{1, 2, 3, 4, 5, 7, 9}
-{1, 2, 3, 4, 5, 7, 9}
-```
-#### Set Intersection
-
-> Intersection ဆိုတာ set နှစ်ခုထဲမှာ ဘုံတူနေတဲ့ Value တွေကို ဆွဲထုတ်တာပါ
-
-![Set Union Example](../img/sets_intersect.png)
-
-##### Example 8 (intersection)
-
-```python
-setA = {1,2,3,4,5}
-setB = {1,3,5,7,9}
-
-#Intersection using set.intersection()
-print(setA.intersection(setB))
-
-#Intersection using '&' operator
-print(setA & setB)
-```
-###### Output:
-```
-{1, 3, 5}
-{1, 3, 5}
+for student in students:
+	for key, value in student.items():
+		print(key,"\t:",value)
+	print("________________")
 ```
 
-#### Set Difference
-
-> Set A ထဲမှာပါနေတဲ့ Set B ထဲက Value တွေကို နှုတ်လိုက်တာ။ တနည်းပြောရရင် A ထဲက B ကို နှုတ်တာပေါ့
-
-![Set Union Example](../img/sets_diff.png)
-
-##### Example 8 (difference)
-
-```python
-setA = {1,2,3,4,5}
-setB = {1,3,5,7,9}
-
-#using set.difference()
-print(setA.difference(setB))
-
-#using '-' operator
-print(setA - setB)
+###### Output
 ```
-###### Output:
-```
-{2, 4}
-{2, 4}
+id      : 1
+name    : Mg Mg
+email   : mgmg@gmail.com
+________________
+id      : 2
+name    : Myo Myo
+email   : myo@gmail.com
+________________
+id      : 3
+name    : Thu Thu
+email   : thu@gmail.com
+________________
 ```
 
-#### Set Symmetric Difference
-
-> Symmetric Difference ဆိုတာ set နှစ်ခုထဲမှာ ဘုံတူနေတဲ့ Value တွေကို ဖယ်လိုက်တာပါ။ (intersection နဲ့ ဆန့်ကျင်ဖက်)(Exclusive values)
-
-![Set Union Example](../img/sets_sym_diff.png)
-
-##### Example 8 (symmetric_difference)
-
-```python
-setA = {1,2,3,4,5}
-setB = {1,3,5,7,9}
-
-#using set.symmetric_difference()
-print(setA.symmetric_difference(setB))
-
-#using '^' operator
-print(setA ^ setB)
-```
-###### Output:
-```
-{2, 4, 7, 9}
-{2, 4, 7, 9}
-```
-
-### Python Set Methods
+**Other Dictionary Methods**
 
 | Method | Description |
 | --- | --- |
-| add() | Adds an element to the set |
-| clear() | Removes all elements from the set |
-| copy() | Returns a copy of the set |
-| difference() | Returns the difference of two or more sets as a new set |
-| difference_update() | Removes all elements of another set from this set |
-| discard() | Removes an element from the set if it is a member. (Do nothing if the element is not in set) |
-| intersection() | Returns the intersection of two sets as a new set |
-| intersection_update() | Updates the set with the intersection of itself and another |
-| isdisjoint() | Returns True if two sets have a null intersection |
-| issubset() | Returns True if another set contains this set |
-| issuperset() | Returns True if this set contains another set |
-| pop() | Removes and returns an arbitrary set element. Raises KeyError if the set is empty |
-| remove() | Removes an element from the set. If the element is not a member, raises a KeyError |
-| symmetric_difference() | Returns the symmetric difference of two sets as a new set |
-| symmetric_difference_update() | Updates a set with the symmetric difference of itself and another |
-| union() | Returns the union of sets in a new set |
-| update() | Updates the set with the union of itself and others |
+| clear() | Removes all items from the dictionary. |
+| copy() | Returns a shallow copy of the dictionary. |
+| fromkeys(seq[, v]) | Returns a new dictionary with keys from seq and value equal to v (defaults to None). |
+| get(key[,d]) | Returns the value of the key. If the key does not exist, returns d (defaults to None). |
+| items() | Return a new object of the dictionary's items in (key, value) format. |
+| keys() | Returns a new object of the dictionary's keys. |
+| pop(key[,d]) | Removes the item with the key and returns its value or d if key is not found. If d is not provided and the key is not found, it raises KeyError. |
+| popitem() | Removes and returns an arbitrary item (key, value). Raises KeyError if the dictionary is empty. |
+| setdefault(key[,d]) | Returns the corresponding value if the key is in the dictionary. If not, inserts the key with a value of d and returns d (defaults to None). |
+| update([other]) | Updates the dictionary with the key/value pairs from other, overwriting existing keys. |
+| values() | Returns a new object of the dictionary's values |
+
+*Reference from [Programiz](https://www.programiz.com)*
