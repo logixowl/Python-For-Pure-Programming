@@ -20,7 +20,8 @@
 | 0x07 | [Conditions](./files/conditions.md) |
 | 0x08 | [Loops](./files/loops.md) |
 | 0x09 | [Lists & Tuple](./files/liststuple.md) |
-| 0x0a | [Set & Dictionary](./files/setdict.md) |
+| 0x0a | [Set](./files/set.md) |
+| 0x0a | [Dictionary](./files/dictionary.md) |
 | 0x0b | [Functions](./files/functions.md) |
 | 0x0c | [String Formatting](./files/stringformat.md) |
 
