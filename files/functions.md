@@ -163,129 +163,171 @@ print(factorial(5))
 120
 ```
 
-##### Example 13 : count()
+#### Global, Local variable
 
-> Format : ```string.count(value, start, end)```
+> Global Variable ဆိုတာ Program တစ်ခုအတွင်းမှာရှိတဲ့ function အပြင်မှာရော function အတွင်းမှာပါ အသုံးပြုနိုင်တဲ့ variable ဖြစ်ပါတယ်
 
-> value = count လုပ်ချင်တဲ့ value
+> Local Variable ဆိုတာ Function တစ်ခုအတွင်းမှာသာ သုံးလို့ ရတာကို ခေါ်ပါတယ်
 
-> start = စမယ့် အခန်းနံပါတ်
-
-> end = ဆုံးမယ့် အခန်းနံပါတ်
-
+##### Example 12 : create a global variable
 ```python
-mytext = 'hi everyone, hi ladies, hi gentleman'
+a = 45
 
-print(mytext.count('hi'))
-print(mytext.count('hi',2))
-print(mytext.count('hi',2,15))
+def myfunc():
+	print('I am number', a)
+
+myfunc()
 ```
 ###### Output:
 ```
-3
-2
-1
+I am number 45
 ```
 
-##### Example 14 : join()
+> ဒါပေမယ့် Example 12 က variable ```a``` ကို ပြင်လို့မရပါဘူး ပြင်ရင် အောက်ပါ အတိုင်း Error တက်ပါလိမ့်မယ်
 
-> Format : ```string.join(iterable)```
-
-> iterable ဆိုတာက string return ပြန်ပေးတဲ့ ဘယ် object မဆို ထည့်လို့ရတယ်။ (required)
-
+##### Example 13 (change global variable (Error))
 ```python
-mytext = "Hello LogixOwl"
-print(':'.join(mytext))
+a = 45
 
-mylist = ['red','green','blue']
-print('#'.join(mylist))
+def myfunc():
+	a = a * 2
+	print('I am number',a)
 
-mydict = {'name':'mgmg', 'sex':'male'}
-print('&'.join(mydict))
+myfunc()
 ```
 ###### Output:
 ```
-H:e:l:l:o: :L:o:g:i:x:O:w:l
-red#green#blue
-name&sex
+Traceback (most recent call last):
+  File "test.py", line 8, in <module>
+    myfunc()
+  File "test.py", line 5, in myfunc
+    a = a * 2
+UnboundLocalError: local variable 'a' referenced before assignment
 ```
 
-##### Example 15 : find()
+> Global variable ကို ပြင်ပြီးသုံးလို့ရအောင် ```global``` ဆိုတဲ့ keyword နဲ့ ကြေငြာပေးရပါတယ်
 
-> Format : ```string.find(value, start, end)```
-
-| A |   | q | u | i | c | k |   | b | r | o | w | n |   | f | o | x |   | j | u | m | p | s |   | o | v | e | r |   | t | h | e |   | l | a | z | y |   | d | o | g | . |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 |
-
+##### Example 14 (global keyword)
 ```python
-text = 'A quick brown fox jumps over the lazy dog.'
+a = 45
 
-print(text.find('over'))
+def myfunc():
+	global a
+	a = a * 2
+	print('I am number',a)
 
-print(text.find('u'))
-print(text.find('u',4))
-print(text.find('o',12,30))
+myfunc()
 ```
 ###### Output:
 ```
+I am number 90
+```
+
+##### Example 15 (create local variable)
+```python
+def myfunc():
+	name = "LogixOwl"
+	print("local:",name)
+
+myfunc()
+# print("global:",name) #will make error
+```
+###### Output:
+```
+local: LogixOwl
+```
+
+##### Example 16 (local & global variables 1)
+```python
+name = 'Unknown'
+
+def myfunc():
+	name = 'LogixOwl'
+	print('Local:', name)
+
+myfunc()
+print('Global:', name)
+```
+###### Output:
+```
+Local: LogixOwl
+Global: Unknown
+```
+
+##### Example 17 (local & global variables 2)
+```python
+name = 'Unknown'
+
+def myfunc():
+	global name #added
+	name = 'LogixOwl'
+	print('Local:', name)
+
+myfunc()
+print('Global:', name)
+```
+###### Output:
+```
+Local: LogixOwl
+Global: LogixOwl
+```
+
+### Creating Own Module
+
+> ```Module``` တစ်ခုဆောက်ဖို့အတွက် python file အရင် ဆောက်ရပါမယ် ```logixowl.py```
+
+> create လုပ်ထားတဲ့ python file နဲ့ အသုံးပြုမယ့် main file သည် path လမ်းကြောင်းတစ်ခုထဲ(folder တစ်ခုထဲ) အတွင်းမှာ ရှိရပါမယ်
+
+> **```logixowl.py```**
+```python
+def isEven(num):
+	return num%2==0
+
+def factorial(num):
+	fact = 1
+	for i in range(1,num+1):
+		fact*=i
+	return fact
+```
+
+> **```test.py```**
+```python
+import logixowl
+
+print(logixowl.isEven(10))
+print(logixowl.isEven(11))
+
+print(logixowl.factorial(5))
+print(logixowl.factorial(4))
+```
+###### Output (run test.py)
+```
+True
+False
+120
 24
-3
-19
-15
 ```
 
-<hr>
+> ```import``` ကို ဒီလိုလဲ လုပ်လို့ရပါသေးတယ် output က တူတဲ့အတွက် output ကို မပြတော့ပါဘူး
 
-**String methods**
+##### test2.py
+```python
+import logixowl as owl
 
-| Method | Description |
-| --- | --- |
-| capitalize() | Converts the first character to upper case |
-| casefold() | Converts string into lower case |
-| center() | Returns a centered string |
-| count() | Returns the number of times a specified value occurs in a string |
-| encode() | Returns an encoded version of the string |
-| endswith() | Returns true if the string ends with the specified value |
-| expandtabs() | Sets the tab size of the string |
-| find() | Searches the string for a specified value and returns the position of where it was found |
-| format() | Formats specified values in a string |
-| format_map() | Formats specified values in a string |
-| index() | Searches the string for a specified value and returns the position of where it was found |
-| isalnum() | Returns True if all characters in the string are alphanumeric |
-| isalpha() | Returns True if all characters in the string are in the alphabet |
-| isdecimal() | Returns True if all characters in the string are decimals |
-| isdigit() | Returns True if all characters in the string are digits |
-| isidentifier() | Returns True if the string is an identifier |
-| islower() | Returns True if all characters in the string are lower case |
-| isnumeric() | Returns True if all characters in the string are numeric |
-| isprintable() | Returns True if all characters in the string are printable |
-| isspace() | Returns True if all characters in the string are whitespaces |
-| istitle()  | Returns True if the string follows the rules of a title |
-| isupper() | Returns True if all characters in the string are upper case |
-| join() | Joins the elements of an iterable to the end of the string |
-| ljust() | Returns a left justified version of the string |
-| lower() | Converts a string into lower case |
-| lstrip() | Returns a left trim version of the string |
-| maketrans() | Returns a translation table to be used in translations |
-| partition() | Returns a tuple where the string is parted into three parts |
-| replace() | Returns a string where a specified value is replaced with a specified value |
-| rfind() | Searches the string for a specified value and returns the last position of where it was found |
-| rindex() | Searches the string for a specified value and returns the last position of where it was found |
-| rjust() | Returns a right justified version of the string |
-| rpartition() | Returns a tuple where the string is parted into three parts |
-| rsplit() | Splits the string at the specified separator, and returns a list |
-| rstrip() | Returns a right trim version of the string |
-| split() | Splits the string at the specified separator, and returns a list |
-| splitlines() | Splits the string at line breaks and returns a list |
-| startswith() | Returns true if the string starts with the specified value |
-| strip() | Returns a trimmed version of the string |
-| swapcase() | Swaps cases, lower case becomes upper case and vice versa |
-| title() | Converts the first character of each word to upper case |
-| translate() | Returns a translated string |
-| upper() | Converts a string into upper case |
-| zfill() | Fills the string with a specified number of 0 values at the beginning |
+print(owl.isEven(10))
+print(owl.isEven(11))
 
-*Reference from [W3School](https://www.w3schools.com/python/python_strings.asp)*
+print(owl.factorial(5))
+print(owl.factorial(4))
+```
 
-[Next (Operators)](./operators.md)
+##### test3.py
+```python
+from logixowl import *
+
+print(isEven(10))
+print(isEven(11))
+
+print(factorial(5))
+print(factorial(4))
+```
