@@ -34,3 +34,4 @@
 | 0x02 | [Group-1 Week-3](./asm/g1_w3.md) |
 | 0x03 | [Group-1 Week-4](./asm/g1_w4.md) |
 | 0x04 | [Group-1 Week-5](./asm/g1_w5.md) |
+| 0x04 | [Group-1 Final Exam](./asm/g1_final.md) |
