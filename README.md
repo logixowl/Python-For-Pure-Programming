@@ -24,14 +24,3 @@
 | 0x0a | [Dictionary](./files/dictionary.md) |
 | 0x0b | [Functions](./files/functions.md) |
 | 0x0c | [String Formatting](./files/stringformat.md) |
-
-#### Assignments & Quiz
-
-| No. | Title |
-| --- | --- |
-| 0x00 | [Group-1 Week-1](./asm/g1_w1.md) |
-| 0x01 | [Group-1 Week-2](./asm/g1_w2.md) |
-| 0x02 | [Group-1 Week-3](./asm/g1_w3.md) |
-| 0x03 | [Group-1 Week-4](./asm/g1_w4.md) |
-| 0x04 | [Group-1 Week-5](./asm/g1_w5.md) |
-| 0x04 | [Group-1 Final Exam](./asm/g1_final.md) |
