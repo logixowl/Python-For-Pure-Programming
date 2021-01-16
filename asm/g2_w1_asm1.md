@@ -56,6 +56,7 @@ print(x,'\t',type(x))
 
 ##### Example Output
 ```
+G2U000
 hello 	 <class 'str'>
 3.4 	 <class 'float'>
 (1, 3) 	 <class 'tuple'>
