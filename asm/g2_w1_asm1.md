@@ -40,6 +40,7 @@ print('logixowl63@gmail.com')
 ##### Example Program (asm1_g2u000.py)
 ```python
 print('G2U000')
+print('logixowl63@gmail.com')
 
 x = 'hello'
 print(x,'\t',type(x))
@@ -57,6 +58,7 @@ print(x,'\t',type(x))
 ##### Example Output
 ```
 G2U000
+logixowl63@gmail.com
 hello 	 <class 'str'>
 3.4 	 <class 'float'>
 (1, 3) 	 <class 'tuple'>
