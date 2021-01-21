@@ -339,6 +339,7 @@ print(name=="logix" or name=="zeegwat")
 ###### Output:
 ```
 True
+False
 ```
 
 ##### Example 26 (not)
