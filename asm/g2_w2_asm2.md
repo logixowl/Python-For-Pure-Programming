@@ -70,5 +70,4 @@ logixowl@gmail.com
 
 သေချာပြီဆိုလျှင် ဒီ link မှာ Assignment ထပ်ရပါမည်
 
-[https://docs.google.com/forms/d/e/1FAIpQLSc4gQ9Ffq91mvyQgyDTxw42t4vcnCMAvSZ1X-WFZzb0UYyt7w/viewform?usp=sf_link](https://docs.google.com/forms/d/e/1FAIpQLSc4gQ9Ffq91mvyQgyDTxw42t4vcnCMAvSZ1X-WFZzb0UYyt7w/viewform?usp=sf_link)
-
+[https://docs.google.com/forms/d/e/1FAIpQLSfRR6CbP7jXX169-IGLBz1HrL-rPGQcebvVPCPJpXSW1ICoPg/viewform?usp=sf_link](https://docs.google.com/forms/d/e/1FAIpQLSfRR6CbP7jXX169-IGLBz1HrL-rPGQcebvVPCPJpXSW1ICoPg/viewform?usp=sf_link)
